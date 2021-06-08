@@ -66,7 +66,7 @@ async def start(c, m, cb=False):
 
 ################## about command ##################
 
-@RenamerNs.on_message(filters.command("about") & filters.incoming)
+@RenamerNs.on_message(filters.command("about") & filters.group & filters.incoming)
 async def about(c, m, cb=False):
     me = await c.get_me()
     owner = await c.get_users(Config.OWNER_ID)
@@ -95,7 +95,7 @@ async def about(c, m, cb=False):
 
 ################## Mode command ##################
 
-@RenamerNs.on_message(filters.command("mode") & filters.incoming)
+@RenamerNs.on_message(filters.command("mode") & filters.group & filters.incoming)
 async def set_mode(c, m):
     upload_mode = (await get_data(m.from_user.id)).upload_mode
     if upload_mode:
@@ -109,7 +109,7 @@ async def set_mode(c, m):
 
 ################## reset command ##################
 
-@RenamerNs.on_message(filters.command("reset") & filters.incoming)
+@RenamerNs.on_message(filters.command("reset") & filters.group & filters.incoming)
 async def reset_user(c, m):
     if m.from_user.id in Config.AUTH_USERS:
         if len(m.command) == 2:
