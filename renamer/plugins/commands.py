@@ -132,7 +132,7 @@ async def reset_user(c, m):
 
 ################## login command ##################
 
-@RenamerNs.on_message(filters.command('login')
+@RenamerNs.on_message(filters.command('login') & filters.incoming & filters.group)
 async def password(c, m):
     if Config.BOT_PASSWORD:
         if m.from_user.id in Config.AUTH_USERS:
