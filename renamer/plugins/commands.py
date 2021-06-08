@@ -11,7 +11,7 @@ from pyrogram.emoji import *
 
 ################## Help command ##################
 
-@RenamerNs.on_message(filters.command("help") & filters.private & filters.incoming)
+@RenamerNs.on_message(filters.command("help") & filters.incoming)
 async def help(c, m, cb=False):
     button = [[
         InlineKeyboardButton(f'{HOUSE_WITH_GARDEN} Home', callback_data='back'),
@@ -37,7 +37,7 @@ async def help(c, m, cb=False):
 
 ################## start commamd ##################
 
-@RenamerNs.on_message(filters.command("start") & filters.private & filters.incoming)
+@RenamerNs.on_message(filters.command("start") & filters.incoming)
 async def start(c, m, cb=False):
     owner = await c.get_users(Config.OWNER_ID)
     owner_username = owner.username if owner.username else 'Ns_bot_updates'
