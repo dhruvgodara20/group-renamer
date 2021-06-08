@@ -8,7 +8,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors import UserNotParticipant, ChatAdminRequired, UsernameNotOccupied
 
 
-@Client.on_message(filters.private & filters.incoming)
+@Client.on_message(filters.incoming)
 async def force_sub(c, m):
     if Config.FORCE_SUB:
         try:
