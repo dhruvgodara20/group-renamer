@@ -11,7 +11,7 @@ from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 ################## Saving thumbnail 🖼 ##################
 
-@RenamerNs.on_message(filters.photo & filters.incoming & filters.private)
+@RenamerNs.on_message(filters.photo & filters.incoming)
 async def save_photo(c, m):
     if Config.BANNED_USERS:
         if m.from_user.id in Config.BANNED_USERS:
@@ -34,7 +34,7 @@ async def save_photo(c, m):
 
 ################## Deleting permanent thumbnail 🗑 ##################
 
-@RenamerNs.on_message(filters.command("deletethumbnail") & filters.incoming & filters.private)
+@RenamerNs.on_message(filters.command("deletethumbnail") & filters.incoming)
 async def delete_thumbnail(c, m):
     if Config.BANNED_USERS:
         if m.from_user.id in Config.BANNED_USERS:
