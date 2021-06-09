@@ -13,38 +13,27 @@ class TEXT:
 
 
     ABOUT = """**𝖬𝗒 𝖣𝖾𝗍𝖺𝗂𝗅𝗌 :**
-
 ** My Name:** {bot_name}
     
 ** Language:** [Python 3](https://www.python.org/)
-
 ** FrameWork:** [Pyrogram](https://github.com/pyrogram/pyrogram)
-
 ** Developer:** {bot_owner}
-
-** Channel:** [NS BOT UPDATES](https://t.me/Ns_bot_updates)
-
-** Group:** [Ns BOT SUPPORT](https://t.me/Ns_Bot_supporters)
-
-** Source Code:** [Press Me](https://github.com/Ns-AnoNymouS/TG-RENAMER-BOT)
+** Channel:** [Movies Channel](https://t.me/HINDI_HD_MOOVIES)
+** Group:** [Movies Group](https://t.me/HindiHdMovies_Group)
+** Source Code:** [Press Me](https://telegram.dog/urs_bond)
 """
 
     HELP_USER = """**Follow Below Steps:**
    
 ☞︎︎︎ Use /mode command to change upload mode.
-☞︎︎︎ Send a photo to set as permanent thumbnail.
-☞︎︎︎ Now send me the Telegram file you want to rename.
-☞︎︎︎ Send the new name when bot ask.
-
+☞︎︎︎ Reply with /savethumbnail to a photo to set as permanent thumbnail.
+☞︎︎︎ Now send me the Telegram file and reply with /rename in the format `/rename Newfilename`.
 For source code check about
 """
 
     START_TEXT = """Hi {user_mention},
-
 I am a telegram renamer with permanent thumbnail.
-
 𝖥𝗈𝗋 𝖬𝗈𝗋𝖾 𝖣𝖾𝗍𝖺𝗂𝗅𝗌 𝖲𝖾𝖾 𝖧𝖾𝗅𝗉.
-
 **Maintained By:** {bot_owner}
 """
 
@@ -59,4 +48,4 @@ __--Payment Methods:--__
  
 GooglePay / Paytm / PhonPay / paypal / Net Banking
  
-**For Donate:** message me @MaxxRiderz"""
+**For Donate:** message me @URS_BOND"""
