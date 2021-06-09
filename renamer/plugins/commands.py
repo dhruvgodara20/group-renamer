@@ -11,7 +11,6 @@ from pyrogram.emoji import *
 
 ################## Help command ##################
 
-@RenamerNs.on_message(filters.command("help") & filters.incoming)
 async def help(c, m, cb=False):
     button = [[
         InlineKeyboardButton(f'{HOUSE_WITH_GARDEN} Home', callback_data='back'),
@@ -37,10 +36,9 @@ async def help(c, m, cb=False):
 
 ################## start commamd ##################
 
-@RenamerNs.on_message(filters.command("start") & filters.incoming)
 async def start(c, m, cb=False):
     owner = await c.get_users(Config.OWNER_ID)
-    owner_username = owner.username if owner.username else 'Its_My_leech'
+    owner_username = owner.username if owner.username else 'Its_my_leech'
     button = [[
         InlineKeyboardButton(f'{MAN_TEACHER_LIGHT_SKIN_TONE} My Owner', url=f'https://t.me/{owner_username}'),
         InlineKeyboardButton(f'{ROBOT} About', callback_data='about')
@@ -66,7 +64,6 @@ async def start(c, m, cb=False):
 
 ################## about command ##################
 
-@RenamerNs.on_message(filters.command("about") & filters.group & filters.incoming)
 async def about(c, m, cb=False):
     me = await c.get_me()
     owner = await c.get_users(Config.OWNER_ID)
@@ -95,7 +92,6 @@ async def about(c, m, cb=False):
 
 ################## Mode command ##################
 
-@RenamerNs.on_message(filters.command("mode") & filters.group & filters.incoming)
 async def set_mode(c, m):
     upload_mode = (await get_data(m.from_user.id)).upload_mode
     if upload_mode:
@@ -109,7 +105,6 @@ async def set_mode(c, m):
 
 ################## reset command ##################
 
-@RenamerNs.on_message(filters.command("reset") & filters.group & filters.incoming)
 async def reset_user(c, m):
     if m.from_user.id in Config.AUTH_USERS:
         if len(m.command) == 2:
@@ -132,7 +127,6 @@ async def reset_user(c, m):
 
 ################## login command ##################
 
-@RenamerNs.on_message(filters.command('login') & filters.incoming & filters.group)
 async def password(c, m):
     if Config.BOT_PASSWORD:
         if m.from_user.id in Config.AUTH_USERS:
