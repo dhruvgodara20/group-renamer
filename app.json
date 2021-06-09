@@ -10,7 +10,7 @@
         "renamer"
     ],
 
-    "repository": "https://github.com/dhruvgodara20/group-renamer",
+    "repository": "https://github.com/Ns-AnoNymouS/Renamer",
     "stack": "heroku-20",
     "website": "https://t.me/Ns_bot_updates",
     "success_url": "https://t.me/RenamerNs_bot",
@@ -21,6 +21,9 @@
         },
         "API_ID": {
             "description": "Your API_ID, Get it from https://my.telegram.org/"
+        },
+        "AUTH_GROUP": {
+            "description": "Your Telegram group id in which bot should work."
         },
         "AUTH_USERS": {
             "description": "list of Auth users who can access bot without password and have rights to use admin commands",
